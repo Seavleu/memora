@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+whisper
+
+
+# backend
+sqlalchemy
+asyncpg
+database
+
+psycopg2-binary
