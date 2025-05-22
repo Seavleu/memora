@@ -1,12 +1,27 @@
-import AudioUploader from "./components/AudioUploader" 
-import MeetingList from "./components/MeetingList"
+import { HeroSection } from '@/components/landing/hero-section';
+import { FeaturesSection } from '@/components/landing/features-section';
+import { PricingSection } from '@/components/landing/pricing-section';
+import { TestimonialsSection } from '@/components/landing/testimonials-section';
+import { CTASection } from '@/components/landing/cta-section';
+import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter } from '@/components/layout/site-footer';
 
 export default function Home() {
   return (
-    <main className="max-w-2xl mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6">Memora: AI Meeting Memory</h1>
-      <AudioUploader />
-      <MeetingList />
-    </main>
-  )
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="flex-1 w-full">
+        <div className="container mx-auto px-4">
+            <HeroSection />
+            <FeaturesSection />
+            <TestimonialsSection />
+            <PricingSection />
+            <CTASection />
+        </div>
+      </main>
+      <SiteFooter />
+    </div>
+  );
 }
+
+
