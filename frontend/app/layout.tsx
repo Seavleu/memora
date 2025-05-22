@@ -1,12 +1,17 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Syne  } from 'next/font/google';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 
-const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '700'] });
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+})
+
 
 export const metadata: Metadata = {
   title: 'Memora - AI Meeting Assistant',
@@ -20,8 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} w-full`}>
+      <html lang="en" className={syne.variable}>
+      <body className={`${syne.className} bg-background text-foreground`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"

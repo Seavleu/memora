@@ -1,4 +1,5 @@
 # Memora: AI Meeting Memory Assistant
+![image](./public/img1.png) 
 
 Memora is an AI-powered meeting memory assistant designed to summarize, track, and manage your team’s meeting knowledge. It acts like a virtual project manager that never forgets past meetings and always keeps your team aligned.
 
